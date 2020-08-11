@@ -33,4 +33,10 @@ public class AplicationServiceImpl implements AplicationService {
     public Location saveLocation(Location location) {
         return this.locationRepository.save(location);
     }
+
+    @Override
+    public Location deleteLocation(Location location) {
+        this.locationRepository.delete(location);
+        return location;
+    }
 }

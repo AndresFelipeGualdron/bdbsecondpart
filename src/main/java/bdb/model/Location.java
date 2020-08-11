@@ -3,7 +3,7 @@ package bdb.model;
 import javax.persistence.*;
 import java.util.Collection;
 
-@Entity
+@Entity(name = "Location")
 public class Location {
     @Id
     String name;
@@ -50,6 +50,11 @@ public class Location {
 
     public void setInternalLocations(Collection<Location> internalLocations) {
         this.internalLocations = internalLocations;
+    }
+
+    @Override
+    public boolean equals(Object object){
+        return ((Location)(object)).getName().equals(this.getName());
     }
 
 }

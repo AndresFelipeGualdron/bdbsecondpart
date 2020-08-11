@@ -14,4 +14,6 @@ public interface AplicationService {
 
     Location saveLocation(Location location);
 
+    Location deleteLocation(Location location);
+
 }
